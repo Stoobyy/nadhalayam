@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Nadhalayam School of Arts</title>
+  <meta name="description" content="Moments from Nadhalayam School of Arts — performances, classrooms, and the joy of learning classical arts in Panavally, Kerala.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" style="color:var(--maroon)">Nadhalayam</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <p class="malayalam" style="color:var(--gold-light);letter-spacing:0.15em;font-size:0.9rem;">ചിത്രങ്ങൾ</p>
+  <h1>Gallery</h1>
+  <p>Glimpses of life at Nadhalayam — the quiet focus of a classroom, the energy of a performance, the joy of shared learning.</p>
+</header>
+
+<section class="section gallery">
+  <div class="gallery-grid" id="galleryGrid">
+
+    <div class="gallery-item reveal" data-caption="Bharatanatyam Performance">
+      <div class="gallery-placeholder lazy-img" data-src="dance-stage" style="min-height:320px; aspect-ratio:3/4;">
+        <span>🪷</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Bharatanatyam Performance</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Carnatic Music Class">
+      <div class="gallery-placeholder lazy-img" data-src="music-class" style="min-height:240px; aspect-ratio:4/3;">
+        <span>🎵</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Carnatic Music Class</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Mohiniyattam Recital">
+      <div class="gallery-placeholder lazy-img" data-src="mohiniyattam-stage" style="min-height:380px; aspect-ratio:2/3;">
+        <span>🌊</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Mohiniyattam Recital</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Veena Practice">
+      <div class="gallery-placeholder lazy-img" data-src="veena-close" style="min-height:220px; aspect-ratio:1/1;">
+        <span>🎼</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Veena Practice</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Group Violin">
+      <div class="gallery-placeholder lazy-img" data-src="violin-group" style="min-height:280px; aspect-ratio:4/5;">
+        <span>🎻</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Group Violin</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Annual Day Celebration">
+      <div class="gallery-placeholder lazy-img" data-src="annual-day" style="min-height:300px; aspect-ratio:3/2;">
+        <span>🏆</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Annual Day</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Young Keyboard Student">
+      <div class="gallery-placeholder lazy-img" data-src="keyboard-kid" style="min-height:250px; aspect-ratio:1/1;">
+        <span>🎹</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Young Keyboard Student</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Mridangam Class">
+      <div class="gallery-placeholder lazy-img" data-src="mridangam-class" style="min-height:340px; aspect-ratio:3/4;">
+        <span>🪘</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Mridangam Class</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Flute Recital">
+      <div class="gallery-placeholder lazy-img" data-src="flute-recital" style="min-height:260px; aspect-ratio:4/3;">
+        <span>🎶</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Flute Recital</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Painting Workshop">
+      <div class="gallery-placeholder lazy-img" data-src="painting-workshop" style="min-height:300px; aspect-ratio:3/2;">
+        <span>🎨</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Painting Workshop</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Tabla Session">
+      <div class="gallery-placeholder lazy-img" data-src="tabla-session" style="min-height:240px; aspect-ratio:1/1;">
+        <span>🥁</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Tabla Session</span></div>
+    </div>
+
+    <div class="gallery-item reveal" data-caption="Guitar Class">
+      <div class="gallery-placeholder lazy-img" data-src="guitar-class" style="min-height:360px; aspect-ratio:2/3;">
+        <span>🎸</span>
+      </div>
+      <div class="gallery-item-overlay"><span>Guitar Class</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <div class="gallery-placeholder" id="lightboxPlaceholder" style="max-width:90vw; max-height:85vh; min-height:400px;">
+    <span style="font-size:5rem;">✦</span>
+  </div>
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<section class="cta reveal">
+  <div class="cta-inner">
+    <h2>Want to See More?</h2>
+    <p>Visit us in person. There's nothing quite like watching a live class or catching an impromptu performance in our halls.</p>
+    <a href="contact.html" class="btn btn-primary">Plan a Visit</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Nadhalayam</div>
+      <div class="footer-ml malayalam">നാദലയം സ്കൂൾ ഓഫ് ആർട്സ്</div>
+      <p>A home for classical arts in the heart of Kerala. Nurturing rhythm, grace, and culture since 2012.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="about.html">About Us</a></p>
+      <p><a href="classes.html">Classes</a></p>
+      <p><a href="gallery.html">Gallery</a></p>
+      <p><a href="contact.html">Contact</a></p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Panavally, Cherthala<br>Alappuzha, Kerala 688526</p>
+      <p><a href="tel:+919497296163">+91 94972 96163</a></p>
+      <p><a href="mailto:nadhalayamonline@mail.com">Email Us</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2024 Nadhalayam School of Arts. All rights reserved.
+  </div>
+</footer>
+
+<a href="https://wa.me/919497296163" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
