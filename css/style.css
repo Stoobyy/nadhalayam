@@ -462,6 +462,15 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
   display: block;
 }
 
+.class-card-img-icon {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
 .class-card h4 {
   font-family: var(--font-serif);
   font-size: 1.3rem;
@@ -855,10 +864,15 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 }
 
 .class-info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
+}
+
+.class-info-grid > * {
+  flex: 0 1 200px;
 }
 
 .class-info-item {
@@ -1159,8 +1173,11 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 
   .class-cards,
   .classes-grid,
-  .why-grid,
-  .class-info-grid {
+  .why-grid {
     grid-template-columns: 1fr;
+  }
+
+  .class-info-grid > * {
+    flex: 1 1 100%;
   }
 }
