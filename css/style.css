@@ -426,16 +426,14 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 }
 
 .why-icon {
-  width: 56px;
-  height: 56px;
+  width: auto;
+  height: auto;
+  min-height: 48px;
   margin: 0 auto 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold-light), transparent);
   color: var(--gold-muted);
-  font-size: 1.4rem;
 }
 
 .why-item h4 {
