@@ -16,8 +16,8 @@
   --cream-dark: #f3e8d7;
   --ivory: #fffff0;
   --gold: #c9a84c;
-  --gold-light: #e8d5a3;
-  --gold-muted: #b8943e;
+  --gold-light: #d4a017;
+  --gold-muted: #b8860b;
   --beige: #f5efe0;
   --warm-white: #fefaf3;
   --text-dark: #2c1810;
@@ -97,13 +97,13 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 .nav-logo {
   font-family: var(--font-serif);
   font-size: 1.6rem;
-  color: var(--cream);
+  color: var(--gold-light);
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: color 0.3s;
 }
 
-.nav.scrolled .nav-logo { color: var(--maroon); }
+.nav.scrolled .nav-logo { color: var(--gold-muted); }
 
 .nav-links {
   display: flex;
@@ -112,7 +112,7 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 }
 
 .nav-links a {
-  color: var(--cream);
+  color: var(--gold-light);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 400;
@@ -122,7 +122,7 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
   transition: color 0.3s;
 }
 
-.nav.scrolled .nav-links a { color: var(--text-body); }
+.nav.scrolled .nav-links a { color: var(--gold-muted); }
 
 .nav-links a::after {
   content: '';
@@ -429,11 +429,16 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
   width: auto;
   height: auto;
   min-height: 48px;
+  max-width: 64px;
   margin: 0 auto 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   color: var(--gold-muted);
+}
+
+.why-item img.why-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
 }
 
 .why-item h4 {
@@ -1066,7 +1071,7 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 
   .nav-links.active { right: 0; }
 
-  .nav-links a { color: var(--cream); font-size: 1rem; }
+  .nav-links a { color: var(--gold-light); font-size: 1rem; }
 
   .nav-toggle { display: flex; z-index: 1001; }
 

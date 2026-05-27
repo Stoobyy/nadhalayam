@@ -7,7 +7,6 @@ if (navToggle && navLinks) {
     navLinks.classList.toggle('active');
   });
 
-  // Close nav when a link is clicked
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
@@ -86,7 +85,6 @@ const lazyObserver = new IntersectionObserver((entries) => {
       const img = entry.target;
       img.classList.add('loaded');
 
-      // Generate a placeholder gradient based on data-src
       const category = img.dataset.src;
       if (category) {
         generatePlaceholder(img, category);
@@ -103,38 +101,23 @@ const lazyObserver = new IntersectionObserver((entries) => {
 lazyImages.forEach(img => lazyObserver.observe(img));
 
 function generatePlaceholder(container, category) {
-  // Generate warm, culturally-appropriate gradient backgrounds
   const palettes = {
-    'bharatanatyam': { from: '#6d0004', to: '#8a1a1f', icon: '🪷' },
-    'carnatic': { from: '#4a0002', to: '#6d0004', icon: '🎵' },
-    'mohiniyattam': { from: '#5a1012', to: '#8a1a1f', icon: '🌊' },
-    'veena': { from: '#3d0002', to: '#5a1012', icon: '🎼' },
-    'violin': { from: '#4a0002', to: '#3d0002', icon: '🎻' },
-    'keyboard': { from: '#6d0004', to: '#4a0002', icon: '🎹' },
-    'guitar': { from: '#5a1012', to: '#6d0004', icon: '🎸' },
-    'tabla': { from: '#3d0002', to: '#4a0002', icon: '🥁' },
-    'mridangam': { from: '#4a0002', to: '#5a1012', icon: '🪘' },
-    'flute': { from: '#6d0004', to: '#3d0002', icon: '🎶' },
-    'painting': { from: '#5a1012', to: '#8a1a1f', icon: '🎨' },
-    'dance-stage': { from: '#3d0002', to: '#6d0004', icon: '🪷' },
-    'music-class': { from: '#4a0002', to: '#5a1012', icon: '🎵' },
-    'mohiniyattam-stage': { from: '#5a1012', to: '#3d0002', icon: '🌊' },
-    'veena-close': { from: '#6d0004', to: '#4a0002', icon: '🎼' },
-    'violin-group': { from: '#3d0002', to: '#5a1012', icon: '🎻' },
-    'annual-day': { from: '#8a1a1f', to: '#6d0004', icon: '🏆' },
-    'keyboard-kid': { from: '#4a0002', to: '#6d0004', icon: '🎹' },
-    'mridangam-class': { from: '#5a1012', to: '#4a0002', icon: '🪘' },
-    'flute-recital': { from: '#6d0004', to: '#5a1012', icon: '🎶' },
-    'painting-workshop': { from: '#3d0002', to: '#8a1a1f', icon: '🎨' },
-    'tabla-session': { from: '#4a0002', to: '#3d0002', icon: '🥁' },
-    'guitar-class': { from: '#5a1012', to: '#6d0004', icon: '🎸' }
+    'bharatanatyam': { from: '#6d0004', to: '#8a1a1f', icon: '\u{1FAB7}' },
+    'carnatic': { from: '#4a0002', to: '#6d0004', icon: '\u{1F3B5}' },
+    'mohiniyattam': { from: '#5a1012', to: '#8a1a1f', icon: '\u{1F30A}' },
+    'veena': { from: '#3d0002', to: '#5a1012', icon: '\u{1F3BC}' },
+    'violin': { from: '#4a0002', to: '#3d0002', icon: '\u{1F3BB}' },
+    'keyboard': { from: '#6d0004', to: '#4a0002', icon: '\u{1F3B9}' },
+    'guitar': { from: '#5a1012', to: '#6d0004', icon: '\u{1F3B8}' },
+    'tabla': { from: '#3d0002', to: '#4a0002', icon: '\u{1F941}' },
+    'mridangam': { from: '#4a0002', to: '#5a1012', icon: '\u{1FA98}' },
+    'flute': { from: '#6d0004', to: '#3d0002', icon: '\u{1F3B6}' },
+    'painting': { from: '#5a1012', to: '#8a1a1f', icon: '\u{1F3A8}' },
   };
 
-  const palette = palettes[category] || { from: '#4a0002', to: '#6d0004', icon: '✦' };
-
+  const palette = palettes[category] || { from: '#4a0002', to: '#6d0004', icon: '\u{2726}' };
   container.style.background = `linear-gradient(135deg, ${palette.from}, ${palette.to})`;
 
-  // Update the icon inside if there's a span
   const iconSpan = container.querySelector('span');
   if (iconSpan) {
     iconSpan.textContent = palette.icon;
@@ -143,7 +126,7 @@ function generatePlaceholder(container, category) {
 
 // ===== Gallery Lightbox =====
 const lightbox = document.getElementById('lightbox');
-const lightboxPlaceholder = document.getElementById('lightboxPlaceholder');
+const lightboxImg = document.getElementById('lightboxImg');
 const lightboxCaption = document.getElementById('lightboxCaption');
 const lightboxClose = document.getElementById('lightboxClose');
 const galleryItems = document.querySelectorAll('.gallery-item');
@@ -151,21 +134,14 @@ const galleryItems = document.querySelectorAll('.gallery-item');
 if (lightbox && galleryItems.length > 0) {
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
-      const placeholder = item.querySelector('.gallery-placeholder');
-      const captionText = item.querySelector('.gallery-item-overlay span')?.textContent || '';
+      const img = item.querySelector('img');
 
-      // Clone the placeholder look
-      if (placeholder) {
-        const style = getComputedStyle(placeholder);
-        lightboxPlaceholder.style.background = style.background;
-        lightboxPlaceholder.style.minHeight = '400px';
-
-        const icon = placeholder.querySelector('span')?.textContent || '✦';
-        const existingIcon = lightboxPlaceholder.querySelector('span');
-        if (existingIcon) existingIcon.textContent = icon;
+      if (img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || '';
       }
 
-      lightboxCaption.textContent = captionText;
+      lightboxCaption.textContent = '';
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
     });
@@ -173,6 +149,7 @@ if (lightbox && galleryItems.length > 0) {
 
   function closeLightbox() {
     lightbox.classList.remove('active');
+    lightboxImg.src = '';
     document.body.style.overflow = '';
   }
 
