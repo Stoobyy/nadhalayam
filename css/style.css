@@ -181,6 +181,14 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
   animation: kenburns 20s ease-in-out infinite alternate;
 }
 
+.hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%);
+  pointer-events: none;
+}
+
 @keyframes kenburns {
   0% { transform: scale(1); }
   100% { transform: scale(1.1); }
@@ -1072,6 +1080,7 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
   .nav-links.active { right: 0; }
 
   .nav-links a { color: var(--cream); font-size: 1rem; }
+  .nav.scrolled .nav-links a { color: var(--cream); }
 
   .nav-toggle { display: flex; z-index: 1001; }
 
@@ -1091,7 +1100,9 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 
   .section { padding: 4rem 1.5rem; }
 
-
+  .hero { height: auto; min-height: 60vh; }
+  .hero-slide { background-size: cover; }
+  .hero-slide-swap { background-size: 100% auto; background-repeat: no-repeat; background-color: var(--maroon-dark); background-image: url('../images/coverpage2.jpeg') !important; }
 
   .since-stats { gap: 1.5rem; }
 
