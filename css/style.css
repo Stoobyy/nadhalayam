@@ -1112,6 +1112,27 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
   }
 }
 
+
+/* ===== Gallery Videos ===== */
+.gallery-item.gallery-video {
+  cursor: default;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: var(--maroon-dark);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* ===== Faculty ===== */
 .faculty-grid {
   display: grid;
