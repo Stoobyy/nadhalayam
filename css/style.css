@@ -1,3 +1,4 @@
+
 /* ===== Fonts ===== */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Noto+Sans+Malayalam:wght@300;400;500;600;700&display=swap');
 
@@ -431,23 +432,20 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 
 .why-item {
   padding: 2rem 1.5rem;
+  text-align: center;
 }
 
 .why-icon {
   width: auto;
   height: auto;
   min-height: 48px;
-  max-width: 64px;
   margin: 0 auto 1rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--gold-muted);
 }
 
-.why-item img.why-icon {
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
-}
 
 .why-item h4 {
   font-family: var(--font-serif);
@@ -1252,6 +1250,7 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 }
 
 .founder-card {
+  text-align: center;
   background: var(--warm-white);
   border-radius: 4px;
   overflow: hidden;
