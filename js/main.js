@@ -53,7 +53,7 @@ if (slides.length > 0 && dots.length > 0) {
     slideInterval = setInterval(() => {
       const next = (currentSlide + 1) % slides.length;
       showSlide(next);
-    }, 5000);
+    }, 8000);
   }
 
   startSlideshow();

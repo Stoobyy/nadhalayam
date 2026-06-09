@@ -1102,6 +1102,7 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
   .hero { height: auto; min-height: 60vh; }
   .hero-slide { background-size: cover; }
   .hero-slide-swap { background-size: 100% auto; background-repeat: no-repeat; background-color: var(--maroon-dark); background-image: url('../images/coverpage2.jpeg') !important; }
+  .hero-slide-left { background-position: left center !important; }
 
   .since-stats { gap: 1.5rem; }
 
