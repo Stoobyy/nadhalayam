@@ -179,7 +179,6 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 
 .hero-slide.active {
   opacity: 1;
-  animation: kenburns 20s ease-in-out infinite alternate;
 }
 
 .hero-slide::after {
@@ -190,10 +189,7 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
   pointer-events: none;
 }
 
-@keyframes kenburns {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.1); }
-}
+
 
 
 
@@ -1101,7 +1097,7 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 
   .hero { height: auto; min-height: 60vh; }
   .hero-slide { background-size: cover; }
-  .hero-slide-swap { background-size: 100% auto; background-repeat: no-repeat; background-color: var(--maroon-dark); background-image: url('../images/coverpage2.jpeg') !important; }
+  .hero-slide-swap { background-size: 100% auto; background-repeat: no-repeat; background-color: var(--maroon-dark); background-image: url('../images/12.jpeg') !important; }
   .hero-slide-left { background-position: left center !important; }
 
   .since-stats { gap: 1.5rem; }
