@@ -177,6 +177,13 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
   background-position: center;
 }
 
+
+.hero-slide-0 { background-image: url('../images/CoverPage1 (2).jpeg'); }
+.hero-slide-1 { background-image: url('../images/CoverPage2 (2).jpeg'); }
+.hero-slide-2 { background-image: url('../images/CoverPage3.jpeg'); }
+.hero-slide-3 { background-image: url('../images/CoverPage4 (1).jpeg'); }
+.hero-slide-4 { background-image: url('../images/CoverPage5 (1).jpeg'); }
+.hero-slide-5 { background-image: url('../images/CoverPage6 (1).jpeg'); }
 .hero-slide.active {
   opacity: 1;
 }
@@ -1097,8 +1104,12 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 
   .hero { height: auto; min-height: 60vh; }
   .hero-slide { background-size: cover; }
-  .hero-slide-swap { background-size: 100% auto; background-repeat: no-repeat; background-color: var(--maroon-dark); background-image: url('../images/12.jpeg') !important; }
-  .hero-slide-left { background-position: left center !important; }
+  .hero-slide-0 { background-image: url('../images/CoverPage7.jpeg') !important; }
+  .hero-slide-1 { background-image: url('../images/CoverPage8.jpeg') !important; }
+  .hero-slide-2 { background-image: url('../images/CoverPage9.jpeg') !important; }
+  .hero-slide-3 { background-image: url('../images/CoverPage10.jpeg') !important; }
+  .hero-slide-4 { background-image: url('../images/CoverPage11.jpeg') !important; }
+  .hero-slide-5 { background-image: url('../images/CoverPage12.jpeg') !important; }
 
   .since-stats { gap: 1.5rem; }
 
