@@ -174,15 +174,15 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
   opacity: 0;
   transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 
-.hero-slide-0 { background-image: url('../images/CoverPage1 (2).jpeg'); }
+.hero-slide-0 { background-position: top; background-image: url('../images/CoverPage1 (2).jpeg'); }
 .hero-slide-1 { background-image: url('../images/CoverPage2 (2).jpeg'); }
-.hero-slide-2 { background-image: url('../images/CoverPage3.jpeg'); }
+.hero-slide-2 { background-position: center; background-image: url('../images/CoverPage3.jpeg'); }
 .hero-slide-3 { background-image: url('../images/CoverPage4 (1).jpeg'); }
-.hero-slide-4 { background-image: url('../images/CoverPage5 (1).jpeg'); }
+.hero-slide-4 { background-position: top; background-image: url('../images/CoverPage5 (1).jpeg'); }
 .hero-slide-5 { background-image: url('../images/CoverPage6 (1).jpeg'); }
 .hero-slide.active {
   opacity: 1;
